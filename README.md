@@ -24,4 +24,6 @@ java -cp "jarvis_1.0.1.jar;runtime/target/neo4j-platform-jar-with-dependencies.j
 
 > **Useful Tips** You can provide an absolute path for the `jar` files to include in the classpath.
 
+## Run the example
 
+The `examples/` folder contains sample bots using the Neo4j platform. You can run them using the command above. Note that some bots require additional information in their `.properties` files such as DialogFlow credentials or Slack tokens that cannot be provided as part as this repository for privacy and security reasons. See [our tutorial section](https://github.com/SOM-Research/jarvis/wiki/Deploying-chatbots) to create your own credentials and deploy the bots.

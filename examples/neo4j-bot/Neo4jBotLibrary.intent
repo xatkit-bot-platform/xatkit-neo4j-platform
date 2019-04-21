@@ -1,0 +1,37 @@
+Library Neo4jBotLibrary 
+
+intent CreateNode {
+	inputs {
+		"Create a node Label"
+	}
+	creates context Node {
+		sets parameter label from fragment "Label" (entity any)
+	}
+}
+
+intent AddProperty {
+	inputs {
+		"Add property Key"
+	}
+	creates context Property {
+		sets parameter key from fragment "Key" (entity any)
+	}
+}
+
+intent AddPropertyValue follows AddProperty {
+	inputs {
+		"Value"
+	}
+	creates context Property {
+		sets parameter val from fragment "Value" (entity any)
+	}
+}
+
+intent CreateRelationship {
+	inputs {
+		"Add relationship to new node Label"
+	}
+	creates context Relationship {
+		sets parameter label from fragment "Label" (entity any)
+	}
+}

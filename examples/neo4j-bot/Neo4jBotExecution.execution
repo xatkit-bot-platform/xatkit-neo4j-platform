@@ -1,0 +1,16 @@
+import library "neo4j-bot/Neo4jBotLibrary.xmi"
+import platform "SlackPlatform"
+import platform "Neo4jPlatform/Neo4jPlatform.xmi"
+
+use provider SlackPlatform.SlackIntentProvider
+
+on intent CreateNode do 
+	action SlackPlatform.Reply(message : "Creating Node with label " + context(Node).get("label"))
+	def node = action Neo4jPlatform.CreateNode(label : context(Node).get("label"))
+	session.store("node", node)
+	
+on intent AddProperty do
+	action SlackPlatform.Reply(message : "Ok, what is the value of the " + context(Property).get("key") + " property?")
+	
+on intent AddPropertyValue do
+	action Neo4jPlatform.AddProperty(node : session.get("node"), key : context(Property).get("key"), val : context(Proprety).get("val"))

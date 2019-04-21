@@ -1,0 +1,8 @@
+# Private keys and tokens
+key.json
+*-private.properties
+
+# Neo4j-related artifacts
+graph.db
+logs
+store_lock

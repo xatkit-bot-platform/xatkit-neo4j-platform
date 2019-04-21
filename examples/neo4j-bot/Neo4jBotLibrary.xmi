@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<intent:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:intent="edu.uoc.som.jarvis.intent" name="Neo4jBotLibrary">
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="CreateNode">
+    <outContexts name="Node">
+      <parameters name="label" textFragment="Label">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>Create a node Label</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="AddProperty" followedBy="//@eventDefinitions.2">
+    <outContexts name="Property">
+      <parameters name="key" textFragment="Key">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>Add property Key</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="AddPropertyValue" follows="//@eventDefinitions.1">
+    <outContexts name="Property">
+      <parameters name="val" textFragment="Value">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>Value</trainingSentences>
+  </eventDefinitions>
+  <eventDefinitions xsi:type="intent:IntentDefinition" name="CreateRelationship">
+    <outContexts name="Relationship">
+      <parameters name="label" textFragment="Label">
+        <entity xsi:type="intent:BaseEntityDefinitionReference">
+          <baseEntity/>
+        </entity>
+      </parameters>
+    </outContexts>
+    <trainingSentences>Add relationship to new node Label</trainingSentences>
+  </eventDefinitions>
+</intent:Library>

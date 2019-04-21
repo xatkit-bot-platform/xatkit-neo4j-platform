@@ -1,0 +1,11 @@
+Platform Neo4jPlatform
+
+path "edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform"
+
+actions {
+	
+	CreateNode(label)
+	AddProperty(node, key, val)
+	CreateRelationship(fromNode, toNode, label)
+
+}

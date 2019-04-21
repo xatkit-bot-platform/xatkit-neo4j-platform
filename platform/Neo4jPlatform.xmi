@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<platform:PlatformDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:platform="edu.uoc.som.jarvis.platform" name="Neo4jPlatform" runtimePath="edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform">
+  <actions name="CreateNode">
+    <parameters key="label"/>
+  </actions>
+  <actions name="AddProperty">
+    <parameters key="node"/>
+    <parameters key="key"/>
+    <parameters key="val"/>
+  </actions>
+  <actions name="CreateRelationship">
+    <parameters key="fromNode"/>
+    <parameters key="toNode"/>
+    <parameters key="label"/>
+  </actions>
+</platform:PlatformDefinition>

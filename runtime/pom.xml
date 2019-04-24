@@ -67,11 +67,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform</mainClass>
-                        </manifest>
-                    </archive>
                     <finalName>neo4j-platform</finalName>
                 </configuration>
             </plugin>

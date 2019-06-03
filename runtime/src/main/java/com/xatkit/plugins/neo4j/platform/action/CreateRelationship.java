@@ -1,8 +1,8 @@
-package edu.uoc.som.jarvis.neo4j.platform.action;
+package com.xatkit.plugins.neo4j.platform.action;
 
 import com.xatkit.core.platform.action.RuntimeAction;
 import com.xatkit.core.session.XatkitSession;
-import edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform;
+import com.xatkit.plugins.neo4j.platform.Neo4jPlatform;
 import fr.inria.atlanmod.commons.log.Log;
 import org.neo4j.graphdb.*;
 

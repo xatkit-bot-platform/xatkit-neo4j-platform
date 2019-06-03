@@ -1,7 +1,7 @@
 package edu.uoc.som.jarvis.neo4j.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
 import edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform;
 import fr.inria.atlanmod.commons.log.Log;
 import org.neo4j.graphdb.GraphDatabaseService;
@@ -38,13 +38,13 @@ public class AddProperty extends RuntimeAction<Neo4jPlatform> {
      * node}, {@code key}, and {@code value}.
      *
      * @param runtimePlatform the {@link Neo4jPlatform} containing the database to store the created property
-     * @param session         the {@link JarvisSession} associated to this action
+     * @param session         the {@link XatkitSession} associated to this action
      * @param node            the node to add a property to
      * @param key             the key of the property to add
      * @param value           the value of the property to add
      * @throws NullPointerException if the provided {@code node} or {@code key} is {@code null}
      */
-    public AddProperty(Neo4jPlatform runtimePlatform, JarvisSession session, Node node, String key, String value) {
+    public AddProperty(Neo4jPlatform runtimePlatform, XatkitSession session, Node node, String key, String value) {
         super(runtimePlatform, session);
         checkNotNull(node, "Cannot construct a %s action with the provided node %s", this.getClass().getSimpleName(),
                 node);

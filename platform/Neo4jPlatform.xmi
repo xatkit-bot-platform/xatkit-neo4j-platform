@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<platform:PlatformDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:platform="edu.uoc.som.jarvis.platform" name="Neo4jPlatform" runtimePath="edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform">
+<platform:PlatformDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:platform="com.xatkit.platform" name="Neo4jPlatform" runtimePath="com.xatkit.plugins.neo4j.platform.Neo4jPlatform">
   <actions name="CreateNode">
     <parameters key="label"/>
   </actions>

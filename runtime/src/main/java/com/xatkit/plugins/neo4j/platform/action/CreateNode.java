@@ -1,7 +1,7 @@
 package edu.uoc.som.jarvis.neo4j.platform.action;
 
-import edu.uoc.som.jarvis.core.platform.action.RuntimeAction;
-import edu.uoc.som.jarvis.core.session.JarvisSession;
+import com.xatkit.core.platform.action.RuntimeAction;
+import com.xatkit.core.session.XatkitSession;
 import edu.uoc.som.jarvis.neo4j.platform.Neo4jPlatform;
 import fr.inria.atlanmod.commons.log.Log;
 import org.neo4j.graphdb.GraphDatabaseService;
@@ -29,10 +29,10 @@ public class CreateNode extends RuntimeAction<Neo4jPlatform> {
      * {@code label}.
      *
      * @param runtimePlatform the {@link Neo4jPlatform} containing the database to create a node in
-     * @param session         the {@link JarvisSession} associated to this action
+     * @param session         the {@link XatkitSession} associated to this action
      * @param label           the label to assign to the node
      */
-    public CreateNode(Neo4jPlatform runtimePlatform, JarvisSession session, String label) {
+    public CreateNode(Neo4jPlatform runtimePlatform, XatkitSession session, String label) {
         super(runtimePlatform, session);
         this.label = label;
     }

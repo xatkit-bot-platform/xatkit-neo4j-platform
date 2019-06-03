@@ -1,7 +1,10 @@
-package edu.uoc.som.jarvis.neo4j.platform;
+package com.xatkit.plugins.neo4j.platform;
 
-import edu.uoc.som.jarvis.core.JarvisCore;
-import edu.uoc.som.jarvis.core.platform.RuntimePlatform;
+import com.xatkit.core.XatkitCore;
+import com.xatkit.core.platform.RuntimePlatform;
+import com.xatkit.plugins.neo4j.platform.action.AddProperty;
+import com.xatkit.plugins.neo4j.platform.action.CreateNode;
+import com.xatkit.plugins.neo4j.platform.action.CreateRelationship;
 import org.apache.commons.configuration2.Configuration;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
@@ -17,9 +20,9 @@ import static java.util.Objects.nonNull;
  * This platform can be used in execution models by importing <i><project_root>/platform/Neo4jPlatform
  * .xmi</i>, and provides the following actions:
  * <ul>
- * <li>{@link edu.uoc.som.jarvis.neo4j.platform.action.CreateNode}: creates a new node in the database</li>
- * <li>{@link edu.uoc.som.jarvis.neo4j.platform.action.AddProperty}: adds a property to a given node</li>
- * <li>{@link edu.uoc.som.jarvis.neo4j.platform.action.CreateRelationship}: creates a relationship between two
+ * <li>{@link CreateNode}: creates a new node in the database</li>
+ * <li>{@link AddProperty}: adds a property to a given node</li>
+ * <li>{@link CreateRelationship}: creates a relationship between two
  * nodes</li>
  * </ul>
  */
@@ -30,7 +33,7 @@ public class Neo4jPlatform extends RuntimePlatform {
      * <p>
      * The provided path can be relative or absolute.
      */
-    public static final String NEO4J_DB_PATH_KEY = "jarvis.neo4j.db.path";
+    public static final String NEO4J_DB_PATH_KEY = "xatkit.neo4j.db.path";
 
     /**
      * The {@link String} representing the path of the Neo4j database to use with this platform.
@@ -45,7 +48,7 @@ public class Neo4jPlatform extends RuntimePlatform {
     private GraphDatabaseService dbService;
 
     /**
-     * Constructs a new {@link Neo4jPlatform} with the provided {@link JarvisCore} and {@link Configuration}.
+     * Constructs a new {@link Neo4jPlatform} with the provided {@link XatkitCore} and {@link Configuration}.
      * <p>
      * This constructor initializes the underlying connection to the Neo4j database using the database path provided
      * in the {@link Configuration}.
@@ -53,13 +56,13 @@ public class Neo4jPlatform extends RuntimePlatform {
      * <b>Note:</b> {@link Neo4jPlatform} requires a valid database path to be initialized, and calling the default
      * constructor will throw an {@link IllegalArgumentException} when looking for the database path.
      *
-     * @param jarvisCore    the {@link JarvisCore} instance associated to this runtime platform
+     * @param xatkitCore    the {@link XatkitCore} instance associated to this runtime platform
      * @param configuration the {@link Configuration} used to retrieve the database path
-     * @throws NullPointerException     if the provided {@code jarvisCore} or {@code configuration} is {@code null}
+     * @throws NullPointerException     if the provided {@code xatkitCore} or {@code configuration} is {@code null}
      * @throws IllegalArgumentException if the provided database path is {@code null} or empty
      */
-    public Neo4jPlatform(JarvisCore jarvisCore, Configuration configuration) {
-        super(jarvisCore, configuration);
+    public Neo4jPlatform(XatkitCore xatkitCore, Configuration configuration) {
+        super(xatkitCore, configuration);
         dbPath = configuration.getString(NEO4J_DB_PATH_KEY);
         checkArgument(nonNull(dbPath) && !dbPath.isEmpty(), "Cannot construct a Neo4j database with the provided " +
                 "path: %s", dbPath);

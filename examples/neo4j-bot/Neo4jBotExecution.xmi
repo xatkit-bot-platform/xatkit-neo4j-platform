@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="edu.uoc.som.jarvis.common" xmlns:execution="edu.uoc.som.jarvis.execution">
-  <eventProviderDefinitions href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@eventProviderDefinitions.0"/>
+<execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="com.xatkit.common" xmlns:execution="com.xatkit.execution">
+  <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@eventProviderDefinitions.0"/>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.0"/>
+    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.0"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
       <values>
-        <parameter href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="+">
           <source xsi:type="common:StringLiteral" value="Creating Node with label "/>
           <args xsi:type="common:OperationCall" name="get">
@@ -18,9 +18,9 @@
     </instructions>
     <instructions xsi:type="common:VariableDeclaration" name="node">
       <value xsi:type="execution:ActionInstance">
-        <action href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0"/>
+        <action href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0"/>
         <values>
-          <parameter href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0/@parameters.0"/>
+          <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0/@parameters.0"/>
           <expression xsi:type="common:OperationCall" name="get">
             <source xsi:type="common:ContextAccess" contextName="Node"/>
             <args xsi:type="common:StringLiteral" value="label"/>
@@ -35,11 +35,11 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.1"/>
+    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.1"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
       <values>
-        <parameter href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="+">
           <source xsi:type="common:StringLiteral" value="Ok, what is the value of the "/>
           <args xsi:type="common:OperationCall" name="+">
@@ -54,27 +54,27 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.2"/>
+    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.2"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1"/>
+      <action href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1"/>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.0"/>
+        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="get">
           <source xsi:type="common:SessionAccess"/>
           <args xsi:type="common:StringLiteral" value="node"/>
         </expression>
       </values>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.1"/>
+        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.1"/>
         <expression xsi:type="common:OperationCall" name="get">
           <source xsi:type="common:ContextAccess" contextName="Property"/>
           <args xsi:type="common:StringLiteral" value="key"/>
         </expression>
       </values>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/jarvis-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.2"/>
+        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.2"/>
         <expression xsi:type="common:OperationCall" name="get">
-          <source xsi:type="common:ContextAccess" contextName="Proprety"/>
+          <source xsi:type="common:ContextAccess" contextName="Property"/>
           <args xsi:type="common:StringLiteral" value="val"/>
         </expression>
       </values>

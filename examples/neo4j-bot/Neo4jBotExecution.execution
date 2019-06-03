@@ -13,4 +13,4 @@ on intent AddProperty do
 	action SlackPlatform.Reply(message : "Ok, what is the value of the " + context(Property).get("key") + " property?")
 	
 on intent AddPropertyValue do
-	action Neo4jPlatform.AddProperty(node : session.get("node"), key : context(Property).get("key"), val : context(Proprety).get("val"))
+	action Neo4jPlatform.AddProperty(node : session.get("node"), key : context(Property).get("key"), val : context(Property).get("val"))

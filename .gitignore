@@ -36,3 +36,15 @@ target
 # Neo4j
 graph.db
 store_lock
+
+# xatkit data
+**/data
+
+# xatkit logs
+**/logs
+
+# Deployment files with credentials
+*-private.properties
+
+# Bin scripts
+bin

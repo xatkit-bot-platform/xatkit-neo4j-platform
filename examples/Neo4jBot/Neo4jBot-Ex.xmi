@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="com.xatkit.common" xmlns:execution="com.xatkit.execution">
-  <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@eventProviderDefinitions.0"/>
+  <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@eventProviderDefinitions.1"/>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.0"/>
+    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-neo4j-platform/examples/Neo4jBot/Neo4jBot-Lib.xmi#//@eventDefinitions.0"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
       <values>
-        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="+">
           <source xsi:type="common:StringLiteral" value="Creating Node with label "/>
           <args xsi:type="common:OperationCall" name="get">
@@ -18,9 +18,9 @@
     </instructions>
     <instructions xsi:type="common:VariableDeclaration" name="node">
       <value xsi:type="execution:ActionInstance">
-        <action href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0"/>
+        <action href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.0"/>
         <values>
-          <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.0/@parameters.0"/>
+          <parameter href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.0/@parameters.0"/>
           <expression xsi:type="common:OperationCall" name="get">
             <source xsi:type="common:ContextAccess" contextName="Node"/>
             <args xsi:type="common:StringLiteral" value="label"/>
@@ -35,11 +35,11 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.1"/>
+    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-neo4j-platform/examples/Neo4jBot/Neo4jBot-Lib.xmi#//@eventDefinitions.1"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0"/>
       <values>
-        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.4/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/ReactPlatform.xmi#//@actions.0/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="+">
           <source xsi:type="common:StringLiteral" value="Ok, what is the value of the "/>
           <args xsi:type="common:OperationCall" name="+">
@@ -54,25 +54,25 @@
     </instructions>
   </executionRules>
   <executionRules>
-    <event href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/examples/neo4j-bot/Neo4jBotLibrary.xmi#//@eventDefinitions.2"/>
+    <event href="file:/C:/Users/Gwendal/Documents/Dev/xatkit-dev/src/platforms/xatkit-neo4j-platform/examples/Neo4jBot/Neo4jBot-Lib.xmi#//@eventDefinitions.2"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.1"/>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.1/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="get">
           <source xsi:type="common:SessionAccess"/>
           <args xsi:type="common:StringLiteral" value="node"/>
         </expression>
       </values>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.1"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.1/@parameters.1"/>
         <expression xsi:type="common:OperationCall" name="get">
           <source xsi:type="common:ContextAccess" contextName="Property"/>
           <args xsi:type="common:StringLiteral" value="key"/>
         </expression>
       </values>
       <values>
-        <parameter href="file:/C:/Users/gwend/Documents/Dev/xatkit-org/neo4j-platform/platform/Neo4jPlatform.xmi#//@actions.1/@parameters.2"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/Neo4jPlatform.xmi#//@actions.1/@parameters.2"/>
         <expression xsi:type="common:OperationCall" name="get">
           <source xsi:type="common:ContextAccess" contextName="Property"/>
           <args xsi:type="common:StringLiteral" value="val"/>
@@ -80,7 +80,7 @@
       </values>
     </instructions>
   </executionRules>
-  <imports xsi:type="common:LibraryImportDeclaration" path="neo4j-bot/Neo4jBotLibrary.xmi"/>
-  <imports xsi:type="common:PlatformImportDeclaration" path="SlackPlatform"/>
-  <imports xsi:type="common:PlatformImportDeclaration" path="Neo4jPlatform/Neo4jPlatform.xmi"/>
+  <imports xsi:type="common:LibraryImportDeclaration" path="Neo4jBot/Neo4jBot-Lib.xmi"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="ReactPlatform"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="Neo4jPlatform"/>
 </execution:ExecutionModel>

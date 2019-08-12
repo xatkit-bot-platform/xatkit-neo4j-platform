@@ -1,0 +1,16 @@
+import library "Neo4jBot/Neo4jBot-Lib.xmi"
+import platform "ReactPlatform"
+import platform "Neo4jPlatform"
+
+use provider ReactPlatform.ChatProvider
+
+on intent CreateNode do 
+	action ReactPlatform.Reply(message : "Creating Node with label " + context(Node).get("label"))
+	def node = action Neo4jPlatform.CreateNode(label : context(Node).get("label"))
+	session.store("node", node)
+	
+on intent AddProperty do
+	action ReactPlatform.Reply(message : "Ok, what is the value of the " + context(Property).get("key") + " property?")
+	
+on intent AddPropertyValue do
+	action Neo4jPlatform.AddProperty(node : session.get("node"), key : context(Property).get("key"), val : context(Property).get("val"))

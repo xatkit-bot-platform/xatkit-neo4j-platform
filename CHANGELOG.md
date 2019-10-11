@@ -8,7 +8,11 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## Unreleased
 
+## [2.0.1] - 2019-10-11
 
+### Changed
+
+- Updated internal dependencies to the latest versions.
 
 ## [2.0.0] - 2019-08-20 
 

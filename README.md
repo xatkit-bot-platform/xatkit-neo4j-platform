@@ -3,10 +3,10 @@ Xatkit Neo4j Platform
 
 [![License Badge](https://img.shields.io/badge/license-EPL%202.0-brightgreen.svg)](https://opensource.org/licenses/EPL-2.0)
 [![Build Status](https://travis-ci.com/xatkit-bot-platform/xatkit-neo4j-platform.svg?branch=master)](https://travis-ci.com/xatkit-bot-platform/xatkit-neo4j-platform)
-[![Wiki Badge](https://img.shields.io/badge/doc-wiki-blue)](https://github.com/xatkit-bot-platform/xatkit-releases/wiki/Xatkit-Neo4j-Platform)
+[![Wiki Badge](https://img.shields.io/badge/doc-wiki-blue)](https://github.com/xatkit-bot-platform/xatkit/wiki/Xatkit-Neo4j-Platform)
 
 
-Create, manipulate, and store [Neo4j](https://neo4j.com/) graphs from your Xatkit execution model. This platform is **not** bundled with the [Xatkit release](https://github.com/xatkit-bot-platform/xatkit-releases/releases).
+Create, manipulate, and store [Neo4j](https://neo4j.com/) graphs from your Xatkit execution model.
 
 
 ## Providers
